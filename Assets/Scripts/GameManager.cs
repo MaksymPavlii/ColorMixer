@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private UIManager UIManager;
 
-    public static int levelID = 2;
+    public static int levelID = 0;
     private bool levelComplete = false;
 
     private static GameManager instance;
