@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdfb8fca41007498f14eded0d1e3ed, type: 3}
+  m_Name: Level 3 Data
+  m_EditorClassIdentifier: 
+  levelID: 2
+  fruits:
+  - {fileID: 7123920707485374155, guid: 53727a90aafd339458f519eca16422e5, type: 3}
+  - {fileID: 377605905497778895, guid: ffbf2ad814c6fee41b261191006b96be, type: 3}
+  - {fileID: 1652104943143083266, guid: d01b41fcf2c5a3a4b9cdc802509c2993, type: 3}
+  requiredColor: {r: 0.67352927, g: 0.28039214, b: 0.3872549, a: NaN}
+  character: {fileID: 1895533312751205953, guid: 1be0c74ebcb859944ba762b7018fbc94,
+    type: 3}
