@@ -97,7 +97,9 @@ public class Blender : MonoBehaviour
 
     private IEnumerator CloseBlenderTimer()
     {
-        yield return new WaitForSeconds(1.5f);
+        float closeTime = 1.5f;
+
+        yield return new WaitForSeconds(closeTime);
         CloseBlender();
     }
 
@@ -118,16 +120,20 @@ public class Blender : MonoBehaviour
         }
         ChangeLiqudColor();
         RaiseLiquidLevel();
+        fruitsInBlender.Clear();
         yield return new WaitForSeconds(shakeDuration);
         CompareLiquidColors();
     }
 
     private void ChangeLiqudColor()
     {
+        float surfaceBrightnessMultiplyer = 1.17f;
+        float coloringDuration = 0;
+
         liquidColor = CalculateAverageLiquidColor();
-        Color newSurfaceColor = liquidColor * 1.17f;
-        liquidMaterial.DOColor(liquidColor, "_LiquidColor", 0);
-        liquidMaterial.DOColor(newSurfaceColor, "_SurfaceColor", 0);
+        Color newSurfaceColor = liquidColor * surfaceBrightnessMultiplyer;
+        liquidMaterial.DOColor(liquidColor, "_LiquidColor", coloringDuration);
+        liquidMaterial.DOColor(newSurfaceColor, "_SurfaceColor", coloringDuration);
     }
 
     private Color CalculateAverageLiquidColor()
@@ -138,13 +144,12 @@ public class Blender : MonoBehaviour
         {
             targetColor += fruitsInBlender[i].FruitColor;
         }
-        fruitsInBlender.Clear();
         return targetColor / divider;
     }
 
     private void RaiseLiquidLevel()
     {
-        DOVirtual.Float(0, 1f, 4, v => liquidMaterial.SetFloat("_Fill", v));
+        DOVirtual.Float(0, 1, shakeDuration, v => liquidMaterial.SetFloat("_Fill", v));
     }
 
     private void StartBlender()

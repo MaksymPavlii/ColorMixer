@@ -41,8 +41,12 @@ public class Fruit : MonoBehaviour
 
     private void JumpInBlender()
     {
+        float jumpStrength = 1f;
+        int jumpCount = 1;
+        float jumpDuration = 0.65f;
+
         blender.AddFruitToBlender(this);
-        transform.DOJump(blender.FruitTargetPos.position, 1f, 1, 0.65f).SetEase(Ease.InOutSine).OnComplete(
+        transform.DOJump(blender.FruitTargetPos.position, jumpStrength, jumpCount, jumpDuration).SetEase(Ease.InOutSine).OnComplete(
             () => { OnPutInBlender?.Invoke(this); });
     }
     

@@ -53,6 +53,6 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 0.1498309, g: 0.8584906, b: 0.7683659, a: 0.2117647}
-    - _LiquidColor: {r: 0.6735294, g: 0.28039217, b: 0.38725492, a: NaN}
-    - _SurfaceColor: {r: 0.7880294, g: 0.32805884, b: 0.45308825, a: NaN}
+    - _LiquidColor: {r: 0.27058825, g: 0.7254902, b: 0.50980395, a: NaN}
+    - _SurfaceColor: {r: 0.31658825, g: 0.84882355, b: 0.5964706, a: NaN}
   m_BuildTextureStacks: []
